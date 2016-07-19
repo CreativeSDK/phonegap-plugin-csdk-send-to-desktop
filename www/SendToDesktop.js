@@ -28,7 +28,16 @@ var exec = cordova.require('cordova/exec'),
 var SendToDesktop = {
     send: function(successCallback, failureCallback, uri, ccApplication, mimeType) {
         exec(successCallback, failureCallback, 'SendToDesktop', 'send', [uri, ccApplication, mimeType]);
-    }
+    },
+
+    /**
+    * @enum {number}
+    */
+   AppType:{
+       PHOTOSHOP: 0,
+       INDESIGN: 1,
+       ILLUSTRATOR: 2
+   }
 };
 
 module.exports = SendToDesktop;

@@ -35,12 +35,13 @@
     UIImage *image = [UIImage imageWithData:imageData];
 
     NSString *mimeType = [command.arguments objectAtIndex:2];
-    //AdobeCreativeCloudApplication *ccApplication = AdobePhotoshopCreativeCloud;
+    AdobeCreativeCloudApplication ccApplication =
+        [self getAppType: [command.arguments objectAtIndex:1]];
 
-    [AdobeSendToDesktopApplication 
+    [AdobeSendToDesktopApplication
         sendImage:image
         //withType:mimeType
-        toApplication: AdobePhotoshopCreativeCloud
+        toApplication: ccApplication
         withName: @"untitled"
         onSuccess:^{
             CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
@@ -53,6 +54,18 @@
             [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }
     ];
+}
+
+- (AdobeCreativeCloudApplication)getAppType:(NSNumber*)type
+{
+    if ([type integerValue] == AppTypePHOTOSHOP) {
+        return AdobePhotoshopCreativeCloud;
+    } else if ([type integerValue] == AppTypeINDESIGN) {
+        return AdobeInDesignCreativeCloud;
+    } else if ([type integerValue] == AppTypeILLUSTRATOR) {
+        return  AdobeIllustratorCreativeCloud;
+    }
+    return AdobeUnknownCreativeCloud;
 }
 
 @end
