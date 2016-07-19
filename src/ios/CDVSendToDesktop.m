@@ -30,30 +30,32 @@
 {
     self.callbackId = command.callbackId;
 
-    NSURL *url = [NSURL URLWithString:[command.arguments objectAtIndex:0]];
-    NSData *imageData = [NSData dataWithContentsOfURL:url];
-    UIImage *image = [UIImage imageWithData:imageData];
+    [self.commandDelegate runInBackground:^{
+        NSURL *url = [NSURL URLWithString:[command.arguments objectAtIndex:0]];
+        NSData *imageData = [NSData dataWithContentsOfURL:url];
+        UIImage *image = [UIImage imageWithData:imageData];
 
-    NSString *mimeType = [command.arguments objectAtIndex:2];
-    AdobeCreativeCloudApplication ccApplication =
-        [self getAppType: [command.arguments objectAtIndex:1]];
+        NSString *mimeType = [command.arguments objectAtIndex:2];
+        AdobeCreativeCloudApplication ccApplication =
+            [self getAppType: [command.arguments objectAtIndex:1]];
 
-    [AdobeSendToDesktopApplication
-        sendImage:image
-        //withType:mimeType
-        toApplication: ccApplication
-        withName: @"untitled"
-        onSuccess:^{
-            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-        }
-        onProgress:nil
-        onCancellation:nil
-        onError:^(NSError *error){
-            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:[error localizedDescription]];
-            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-        }
-    ];
+        [AdobeSendToDesktopApplication
+            sendImage:image
+            //withType:mimeType
+            toApplication: ccApplication
+            withName: @"untitled"
+            onSuccess:^{
+                CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+                [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+            }
+            onProgress:nil
+            onCancellation:nil
+            onError:^(NSError *error){
+                CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:[error localizedDescription]];
+                [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+            }
+        ];
+    }];
 }
 
 - (AdobeCreativeCloudApplication)getAppType:(NSNumber*)type
