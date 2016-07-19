@@ -1,0 +1,40 @@
+{
+    "name": "phonegap-plugin-csdk-send-to-desktop",
+    "description": "This repo is a template for starting a new plugin.",
+    "version": "0.0.1",
+    "homepage": "http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop#readme",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop.git"
+    },
+    "bugs": {
+        "url": "https://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/issues"
+    },
+    "cordova": {
+        "id": "phonegap-plugin-csdk-send-to-desktop",
+        "platforms": [
+            "ios",
+            "android"
+        ]
+    },
+    "keywords": [
+        "ecosystem:cordova",
+        "ecosystem:phonegap",
+        "cordova-ios",
+        "cordova-android"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ],
+    "author": "Adobe PhoneGap Team",
+    "license": "APL",
+    "scripts": {
+        "test": "jasmine-node --color spec"
+    },
+    "devDependencies": {
+        "jasmine-node": "1.14.5"
+    }
+}
