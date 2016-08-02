@@ -22,6 +22,8 @@
 phonegap-plugin-csdk-send-to-desktop
 ------------------------
 
+[![Stories in Ready](https://badge.waffle.io/CreativeSDK/phonegap-plugin-csdk-send-to-desktop.png?label=ready&title=Ready)](http://waffle.io/CreativeSDK/phonegap-plugin-csdk-send-to-desktop)
+
 # Prerequisites
 
 Before you can work with the Creative SDK, you must register your application and get Client ID and Client Secret values. For details, see [Registering Your Application](https://creativesdk.adobe.com/docs/ios/#/articles/gettingstarted/index.html).
