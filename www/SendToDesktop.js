@@ -25,9 +25,9 @@
 var exec = cordova.require('cordova/exec'),
     utils = cordova.require('cordova/utils');
 
-var SendToDesktop = {
+var CSDKSendToDesktop = {
     send: function(successCallback, failureCallback, uri, ccApplication, mimeType) {
-        exec(successCallback, failureCallback, 'SendToDesktop', 'send', [uri, ccApplication, mimeType]);
+        exec(successCallback, failureCallback, 'CSDKSendToDesktop', 'send', [uri, ccApplication, mimeType]);
     },
 
     /**

@@ -11,10 +11,6 @@ import org.json.JSONException;
 
 import io.cordova.hellocordova.MainActivity;
 
-/**
- * Created by ash on 7/19/16.
- */
-
 public class SendToDesktop extends CordovaPlugin {
 
     public CallbackContext callbackContext;
