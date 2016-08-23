@@ -40,4 +40,4 @@ var CSDKSendToDesktop = {
    }
 };
 
-module.exports = SendToDesktop;
+module.exports = CSDKSendToDesktop;
