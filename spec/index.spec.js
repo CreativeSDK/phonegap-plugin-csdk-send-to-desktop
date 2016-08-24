@@ -4,7 +4,8 @@
  * Module dependencies.
  */
 
-var cordova = require('./helper/cordova'),
+ var cordova = require('./helper/cordova'),
+    document = require('./helper/document'),
     CSDKSendToDesktop = require('../www/SendToDesktop'),
     execSpy,
     execWin,
@@ -40,11 +41,27 @@ describe('phonegap-plugin-csdk-send-to-desktop', function () {
         });
     });
 
+    describe('Absolute Path', function() {
+        it('should contain a getAbsolutePath function', function () {
+            expect(CSDKSendToDesktop.getAbsolutePath).toBeDefined();
+            expect(typeof CSDKSendToDesktop.getAbsolutePath === 'function').toBe(true);
+        });
+
+        it('should be valid', function() {
+            expect(CSDKSendToDesktop.getAbsolutePath('http://www.here.com/index.html', 'http://www.here.com/img/logo.png')).toBe('http://www.here.com/img/logo.png');
+            expect(CSDKSendToDesktop.getAbsolutePath('http://www.here.com/contacts/index.html', '../img/logo.png')).toBe('http://www.here.com/img/logo.png');
+            expect(CSDKSendToDesktop.getAbsolutePath('http://www.here.com/index.html', './img/logo.png')).toBe('http://www.here.com/img/logo.png');
+            expect(CSDKSendToDesktop.getAbsolutePath('file:///android_asset/www/index.html', 'file:///android_asset/www/img/logo.png')).toBe('file:///android_asset/www/img/logo.png');
+            expect(CSDKSendToDesktop.getAbsolutePath('file:///android_asset/www/index.html', '../www/img/logo.png')).toBe('file:///android_asset/www/img/logo.png');
+            expect(CSDKSendToDesktop.getAbsolutePath('file:///android_asset/www/index.html', './img/logo.png')).toBe('file:///android_asset/www/img/logo.png');
+        });
+    });
+
     describe('CSDKSendToDesktop instance', function () {
         describe('cordova.exec', function () {
             it('should call cordova.exec on next process tick', function (done) {
                 CSDKSendToDesktop.send(function(profile) {
-                }, function() {}, "", CSDKSendToDesktop.AppType.PHOTOSHOP, "");
+                }, function() {}, '', CSDKSendToDesktop.AppType.PHOTOSHOP, '');
                 setTimeout(function () {
                     expect(execSpy).toHaveBeenCalledWith(
                         jasmine.any(Function),

@@ -20,7 +20,7 @@
 */
 
 /* global cordova:false */
-/* globals window */
+/* globals window, document */
 
 var exec = cordova.require('cordova/exec'),
     utils = cordova.require('cordova/utils');
@@ -41,7 +41,30 @@ var CSDKSendToDesktop = {
      * @param {!string} mimeType The mime type of the image you are sending.
      */
     send: function(successCallback, failureCallback, uri, ccApplication, mimeType) {
-        exec(successCallback, failureCallback, 'CSDKSendToDesktop', 'send', [uri, ccApplication, mimeType]);
+        var path = CSDKSendToDesktop.getAbsolutePath(document.location.href, uri);
+        exec(successCallback, failureCallback, 'CSDKSendToDesktop', 'send', [path, ccApplication, mimeType]);
+    },
+
+    getAbsolutePath: function(base, relative) {
+        if (relative.indexOf('./') !== 0 && relative.indexOf('../') !== 0) {
+            return relative;
+        }
+
+        var stack = base.split('/'),
+        parts = relative.split('/');
+        stack.pop(); // remove current file name (or empty string)
+        for (var i=0; i<parts.length; i++) {
+            if (parts[i] === '.') {
+                continue;
+            }
+            if (parts[i] === '..') {
+                stack.pop();
+            }
+            else {
+                stack.push(parts[i]);
+            }
+        }
+        return stack.join('/');
     },
 
     /**

@@ -36,6 +36,8 @@
             </feature>
         </config-file>
 
+        <framework src="com.adobe.creativesdk.foundation:assetux:0.9.1062+"/>
+
         <source-file src="src/android/SendToDesktop.java" target-dir="src/com/adobe/phonegap/csdk" />
     </platform>
 
