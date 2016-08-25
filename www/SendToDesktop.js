@@ -44,7 +44,7 @@ var CSDKSendToDesktop = {
         var path = CSDKSendToDesktop.getAbsolutePath(document.location.href, uri);
         exec(successCallback, failureCallback, 'CSDKSendToDesktop', 'send', [path, ccApplication, mimeType]);
     },
-
+    /** @private */
     getAbsolutePath: function(base, relative) {
         if (relative.indexOf('./') !== 0 && relative.indexOf('../') !== 0) {
             return relative;

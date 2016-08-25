@@ -32,9 +32,13 @@
     "author": "Adobe PhoneGap Team",
     "license": "APL",
     "scripts": {
-        "test": "jasmine-node --color spec"
+      "build": "npm run build:docs && npm test",
+      "build:docs": "jsdoc2md www/SendToDesktop.js > docs/api.md",
+      "test": "jasmine-node --color spec"
     },
     "devDependencies": {
-        "jasmine-node": "1.14.5"
+        "jasmine-node": "1.14.5",
+        "jsdoc-to-markdown": "^1.3.7",
+        "pluginpub": "^0.0.5"
     }
 }
