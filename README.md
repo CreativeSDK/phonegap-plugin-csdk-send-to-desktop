@@ -111,7 +111,7 @@ This plugin provides access to a global `CSDKSendToDesktop` object.
 
 The `CSDKSendToDesktop` object exposes a `.send()` function.
 
-See comments **#1-3** below for relevant code:
+See comments **#1-2** below for relevant code (this code assumes you have already completed the steps in the [User Auth plugin](https://github.com/CreativeSDK/phonegap-plugin-csdk-user-auth) README):
 
 ```
 var app = {
@@ -130,11 +130,16 @@ var app = {
     receivedEvent: function(id) {
         // ...
     },
-
-    /* 2) Make a helper function to login to Creative Cloud */
+    login: function() {
+        // See the User Auth plugin repo sample code
+    },
+    logout: function() {
+        // See the User Auth plugin repo sample code
+    },
+    /* 2) Make a helper function to send to Adobe desktop apps */
     sendToDesktop: function() {
 
-        /* 2.a) Prep work for calling `.login()` */
+        /* 2.a) Prep work for calling `.send()` */
         function success() {
             console.log("Sent to Photoshop!");
         }
@@ -150,7 +155,13 @@ var app = {
         var mimeType = "image/jpeg";
 
 
-        /* 2.b) Launch User Auth */
+        /*
+            2.b) Send to desktop
+            NOTE: your user must be logged in (`this.login`) via the
+            User Auth plugin BEFORE calling this.
+
+            See the User Auth plugin repo's sample code for more info.
+        */
         CSDKSendToDesktop.send(success, error, uri, ccApplication, mimeType);
     }
 };
