@@ -111,7 +111,9 @@ This plugin provides access to a global `CSDKSendToDesktop` object.
 
 The `CSDKSendToDesktop` object exposes a `.send()` function.
 
-See comments **#1-2** below for relevant code (this code assumes you have already completed the steps in the [User Auth plugin](https://github.com/CreativeSDK/phonegap-plugin-csdk-user-auth) README):
+See comments **#1-2** below for relevant code.
+
+_**Note:** This code assumes you have completed the steps in the [User Auth plugin](https://github.com/CreativeSDK/phonegap-plugin-csdk-user-auth) README and you have already logged your user in with their Adobe ID._
 
 ```
 var app = {
