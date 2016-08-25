@@ -24,55 +24,11 @@ phonegap-plugin-csdk-send-to-desktop
 
 [![Stories in Ready](https://badge.waffle.io/CreativeSDK/phonegap-plugin-csdk-send-to-desktop.png?label=ready&title=Ready)](http://waffle.io/CreativeSDK/phonegap-plugin-csdk-send-to-desktop)
 
-# Prerequisites
-
-Before you can work with the Creative SDK, you must register your application and get Client ID and Client Secret values. For details, see [Registering Your Application](https://creativesdk.adobe.com/docs/ios/#/articles/gettingstarted/index.html).
-
-To get the iOS SDK, go to the [Downloads page](https://creativesdk.adobe.com/downloads.html), download the ZIP files, and extract them to the src/ios folder of this plugin. It should create a AdobeCreativeSDKFrameworks folder. The ZIP files contain all the frameworks in the Creative SDK but for this plugin we will only be using the AdobeCreativeSDKCore.framework.
-
-The following software is required:
-- Xcode 7 or higher
-- iOS 8.2 or higher
-
-# Installation
-
-To add to your app:
-
-```
-phonegap plugin add --save https://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop
-```
-
-***
-
-<!--
-#
-# Licensed to the Apache Software Foundation (ASF) under one
-# or more contributor license agreements.  See the NOTICE file
-# distributed with this work for additional information
-# regarding copyright ownership.  The ASF licenses this file
-# to you under the Apache License, Version 2.0 (the
-# "License"); you may not use this file except in compliance
-# with the License.  You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing,
-# software distributed under the License is distributed on an
-# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-#  KIND, either express or implied.  See the License for the
-# specific language governing permissions and limitations
-# under the License.
-#
--->
-
-phonegap-plugin-csdk-user-auth
-------------------------
-
-[![Stories in Ready](https://badge.waffle.io/CreativeSDK/phonegap-plugin-csdk-user-auth.png?label=ready&title=Ready)](http://waffle.io/CreativeSDK/phonegap-plugin-csdk-user-auth)
-
 The Creative SDK provides a simple way for your mobile users to send their work from your app directly to Adobe desktop apps.
 
 You can specify which application the shared data will open in. Three applications support this feature: Photoshop, Illustrator, and InDesign.
+
+![](https://s3.amazonaws.com/csdk-assets-aviary-prod-us-east-1/docs/android/send-to-desktop-flow.jpeg)
 
 This plugin makes it possible for you to use the Creative SDK Send To Desktop API in your PhoneGap apps. Read on to learn how!
 
@@ -91,7 +47,9 @@ This plugin makes it possible for you to use the Creative SDK Send To Desktop AP
 - [Client Auth plugin](https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth)
 - [User Auth plugin](https://github.com/CreativeSDK/phonegap-plugin-csdk-user-auth)
 
-**Required:** This guide will assume that you have installed all software and completed all of the steps in the [Client Auth guide](https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth).
+**Required:** This guide will assume that you have installed all software and completed all of the steps in the plugin guides linked above.
+
+**Required:** Your user must be logged in to with their Adobe ID (via the [User Auth plugin](https://github.com/CreativeSDK/phonegap-plugin-csdk-user-auth)) for Send To Desktop to work.
 
 
 # Installation
@@ -163,7 +121,7 @@ var app = {
     bindEvents: function() {
         // ...
 
-        /* 1) Add a click handlers for your button */
+        /* 1) Add a click handler for your button */
         document.getElementById('send-to-desktop').addEventListener('click', this.sendToDesktop, false);
     },
     onDeviceReady: function() {
@@ -177,8 +135,8 @@ var app = {
     sendToDesktop: function() {
 
         /* 2.a) Prep work for calling `.login()` */
-        function success(userObject) {
-            console.log("Login Success!", successObject);
+        function success() {
+            console.log("Sent to Photoshop!");
         }
 
         function error(error) {
