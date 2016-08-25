@@ -87,7 +87,7 @@ No action is required for Android. The Creative SDK for Android is delivered as 
 
 ## `www/index.html`
 
-Add two buttons within the `body`. The PhoneGap "Hello World" example includes a `div` with an ID of `app`, so for this example, we are including it in there.
+Add a button within the `body`. The PhoneGap "Hello World" example includes a `div` with an ID of `app`, so for this example, we are including it in there.
 
 ```
 // ...
