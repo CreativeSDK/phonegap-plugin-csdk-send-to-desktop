@@ -59,7 +59,7 @@ This plugin makes it possible for you to use the Creative SDK Send To Desktop AP
 Use the command below to add the plugin to your app.
 
 ```
-phonegap plugin add --save https://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop
+phonegap plugin add --save phonegap-plugin-csdk-send-to-desktop
 ```
 
 ## Downloading the Creative SDK
