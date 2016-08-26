@@ -66,9 +66,7 @@ phonegap plugin add --save https://github.com/CreativeSDK/phonegap-plugin-csdk-s
 
 **iOS**
 
-To get the iOS SDK, go to the [Downloads page](https://creativesdk.adobe.com/downloads.html), download the ZIP files, and extract them to the `src/ios` folder of this plugin. Extracting the ZIP will create an `AdobeCreativeSDKFrameworks` folder.
-
-The ZIP files contain all the frameworks in the Creative SDK, but for this plugin we will only be using the `AdobeCreativeSDKCore.framework`.
+No action is required for iOS. The portions of the Creative SDK required for this plugin are already included in the UserAuth plugin.
 
 
 **Android**
@@ -80,7 +78,6 @@ No action is required for Android. The Creative SDK for Android is delivered as 
 
 1. `cd` into your existing PhoneGap app (must already include [Client Auth](https://github.com/CreativeSDK/phonegap-plugin-csdk-client-auth) and [User Auth](https://github.com/CreativeSDK/phonegap-plugin-csdk-user-auth))
 1. Add this plugin (see "Adding the plugin" above)
-1. **iOS only:** download and add the Creative SDK to this plugin's `src/ios` directory (see "Downloading the Creative SDK" above)
 1. Build and run for your platform
 
 # Sample code
