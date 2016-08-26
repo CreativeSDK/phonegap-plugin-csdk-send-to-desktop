@@ -1,1 +1,32 @@
 # Change Log
+
+## [v1.0.0](https://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/tree/v1.0.0) (2016-07-09)
+[Full Changelog](https://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/compare/v0.0.1...v1.0.0)
+
+- 1.0.0 [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/15df2edb0f1ff37ee287a4e823b49832fefa47bf)
+- Bumping plugin version to 1.0.0 [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/5fa7f878dfe711cd4fd4cc96d86c7f6da13151af)
+- Fix failing test [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/93119417a71cc72bfa9b6e4605e27654842424bd)
+- Adding changelog [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/7003cbddec0a47876c38706dce9b038af4eabced)
+- Update install instructions for iOS [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/26af6c60a312244be5051fa138eaa594fd7ac0b6)
+- Merge pull request #11 from CreativeSDK/dev [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/adb3ced32fbe31ebfd03806520be90b1b73b7a83)
+- Updating sample code. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/d4a13df97f47cf1a2d50f4a2a18c672f90a9c058)
+- Use assetcore not assetux [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/51bb7cc0e2dbda256b289def3ea9cf7dabb99bc4)
+- Copy edit. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/2f54877186e50ad6f445551948f1cec3050745e2)
+- Add build scripts to package.json [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/ae6e3bf67a3b0fae1806289ce3e61f05baa3cef4)
+- Android implementation [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/c8c45fd7a2d0c2c5a17f7660aa960703cc2e0620)
+- Merge pull request #9 from CreativeSDK/docs [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/54cf686af572f17f5ea29678972696524b874680)
+- Reiterating the need for a logged-in user. Also, random fixes. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/ce043ca0ccf5c7a030ffd13ffa46f821ad59517a)
+- Reiterating the need for a logged-in user. Also, random fixes. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/9304ab0d8b974554ca7ae855d9a6bdcc9c24eeae)
+- First pass at JSDoc. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/746991c6eaa00c0cb31b0f2654219dc3c05894de)
+- Developer guide update. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/deebad9b5c1638f4c57726fb8eb69497068aec68)
+- First pass at developer guide. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/46aa0691c0739b97116608691e4670a5edc96295)
+- Added contributor section. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/fed179a2a7ccab40eee8616e861a35ebee16fb4b)
+- Add tests [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/2986f270ae77ff3d3e0e538557fe5b2e78473b9b)
+- Rename to CSDKSendToDesktop [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/f3ab890f3ff650787d548915a2105cd42a9c08aa)
+- Added Waffle badge. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/9d1e033bf7d6e0e02edac7e56072ed4c2662d02e)
+- Run in background thread on iOS [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/69088b78090a9bc4aea2654808e0521adc1deef2)
+- Add app types to send to desktop [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/2264e8aff6bb996006d50c52bb7cbfce2229dbac)
+- First pass at iOS. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/9ca0a439b0e001a67c25b5d7ce372e9046f9d523)
+- Initial setup for Android. [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/81c14f224a43373b076c4c43ee0cfdc9fb7a3680)
+
+# Change Log
