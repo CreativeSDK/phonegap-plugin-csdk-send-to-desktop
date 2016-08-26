@@ -164,7 +164,7 @@ var app = {
 
             See the User Auth plugin repo's sample code for more info.
         */
-        CSDKSendToDesktop.send(success, error, uri, ccApplication, mimeType);
+        CSDKSendToDesktop.send(success, error, imageUri, ccApplication, mimeType);
     }
 };
 ```
