@@ -41,7 +41,9 @@ var CSDKSendToDesktop = {
      * @param {!string} mimeType The mime type of the image you are sending.
      */
     send: function(successCallback, failureCallback, uri, ccApplication, mimeType) {
-        var path = CSDKSendToDesktop.getAbsolutePath(document.location.href, uri);
+        // added for Jasmine test
+        var location = document.location || {href: ''};
+        var path = CSDKSendToDesktop.getAbsolutePath(location.href, uri);
         exec(successCallback, failureCallback, 'CSDKSendToDesktop', 'send', [path, ccApplication, mimeType]);
     },
     /** @private */
