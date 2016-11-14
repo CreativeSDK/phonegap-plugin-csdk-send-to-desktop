@@ -1,5 +1,15 @@
 # Change Log
 
+## [v1.0.1](https://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/tree/v1.0.1) (2016-07-09)
+[Full Changelog](https://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/compare/v1.0.0...v1.0.1)
+
+- 1.0.1 [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/02ed408befebd1779e0396cbe0e50e12d14f4b5d)
+- Bumping plugin version to 1.0.1 [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/b44b351ca6c528133a730bc6d1d060e68de9d876)
+- Update to latest CSDK [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/ea7193677e04399265cab29577da09d6aa632f09)
+- Issue #12: Add LICENSE file [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/52f9651a56bae12819b61fb1c0d5892a02cd2434)
+- Update CLI installation instructions [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/70cde756df28ad353423eb2391514d9e6fe75826)
+- Updating CHANGELOG [view commit](http://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/commit/a236cf82a8dba27f43ee45e8a23a561082bf8300)
+
 ## [v1.0.0](https://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/tree/v1.0.0) (2016-07-09)
 [Full Changelog](https://github.com/CreativeSDK/phonegap-plugin-csdk-send-to-desktop/compare/v0.0.1...v1.0.0)
 
